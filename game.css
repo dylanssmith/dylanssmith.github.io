@@ -60,12 +60,29 @@ body {
     margin: 15px;
 }
 
+/*About Page Titles, Icons, and Content*/
 .aFlex {
     display: flex;
+    flex-direction: row;
     margin: 10px;
 }
-
-
+.centralTitle {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.gS {
+    font-family: '8BITWONDERNominal';
+    padding: 14px 20px;
+    color: #C03940;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
 
 /*Explanation text - easier to read*/
 h4 {
@@ -78,29 +95,34 @@ h6 {
     font-family: Helvetica;
     color: #4A4A4A;
 }
-
 .sansRed {
     font-family: Helvetica;
     color: #C03940;
 }
 
-/*Dark Patterns Forest Text and styling*/
+/*Dark Patterns Forest Text and animations*/
 .dpftext span {
     font-size: 64px;
 }
 .dpftext {
-    position: relative;
-    bottom: 55%;
+    transition: transform 1s;
+    transition-timing-function: steps(10, end);
+    padding: 0px 0px 300px;
+    max-width: 500px;
 }
+
+/*Text and button animations*/
+.exitDown {
+    transform: translate(0, 700px);
+}
+
+/*Game End*/
 .endtext {
-    position: absolute;
-    top: 24%;
     color: #ffffff;
 }
 .endtext2 {
-    position: absolute;
-    top: 30%;
     color: #ffffff;
+    padding: 0px 0px 400px;
 }
 
 /*White text*/
@@ -112,16 +134,25 @@ h6 {
 
 /*Game over Text*/
 .gg {
-    position: absolute;
     font-size: 64px;
-    top: 40%;
-    line-height: 100px;
     color: #C03940;
+    
+}
+.gg2 {
+    font-size: 64px;
+    color: #C03940;
+    padding: 40px 20px 200px;
 }
 
 /*Monster text*/
 .monsterText{
     font-family: '8BITWONDERNominal';
+}
+
+.treasureChest:hover {
+    opacity: 0.6;
+    transition: 0.1s;
+    cursor: pointer;
 }
 
 /*Treasure Chest empty boxes*/
@@ -151,7 +182,7 @@ h6 {
 .about {
     font-family: '8BITWONDERNominal';
     text-align: center;
-    padding: 11.5px 40px;
+    padding: 8.5px 40px;
     font-size: 16px;
     background-color: #EFB50E;
     color: #111C29;
@@ -159,8 +190,14 @@ h6 {
     max-height: 48px;
     cursor: pointer;
 }
+.about:hover {
+    background-color: #0469D9;
+    color: #ffffff;
+    transition: 0.1s;
+    cursor: pointer;
+}
 
-/*Play button*/
+/*Play button and animations*/
 .play {
     font-family: '8BITWONDERNominal';
     text-align: center;
@@ -171,6 +208,15 @@ h6 {
     color: #C03940;
     border: 6px solid #4A4A4A;
     box-shadow: 3px 3px 3px #4A4A4A;
+    transition: transform 1s;
+    transition-timing-function: steps(10, end)
+}
+.play:hover {
+    background-color: #0469D9;
+    color: #ffffff;
+    transition: 0.1s;
+    border: 6px solid #0469D9;
+    cursor: pointer;
 }
 
 /*Smaller gold buttons with red text*/
@@ -188,6 +234,13 @@ h6 {
     bottom: 0;
     left: 45%;
     margin: 5px 5px 15px 5px;
+}
+.small:hover {
+    background-color: #0469D9;
+    color: #ffffff;
+    transition: 0.1s;
+    border: 6px solid #0469D9;
+    cursor: pointer;
 }
 
 /*Left background forest*/
@@ -220,8 +273,6 @@ h6 {
 
 /*DPF text, Play button, and Player*/
 .middle {
-    width: 560px;
-    position: relative;
     left: 28%;
     display: flex;
     flex-direction: column;
@@ -237,20 +288,37 @@ h6 {
     top: 50%;
 }
 
-/*Monster image*/
+/*Monster image and animation*/
 .monster {
     max-width: 180px;
     position: absolute;
     top: 10%;
 }
+#monAnim {
+    transition: transform 1s;
+    transition-timing-function: steps(10, end);
+    transition-delay: 1s;
+    margin-top: -705px;
+}
+/*Button animation*/
+#butAnim {
+    position: absolute;
+    transition: transform 1s;
+    transition-timing-function: steps(10, end);
+    transition-delay: 1s;
+    margin-top: -730px;
+}
 
 /*Text box description for gameplay*/
 .goal {
     background-color: #ffffff;
-    padding: 5px;
+    padding: 10px;
     border: 6px solid #EFB50E;
     text-align: center;
-    margin: 5px;
+    margin: 10px;
+}
+.goal h2 {
+    font-size: 30px;
 }
 
 /*Subscribe gameplay box*/
@@ -290,7 +358,7 @@ h6 {
 #endCont {
     padding: 10px 30px;
     font-size: 16px;
-    left: 35%;
+    left: 42%;
 }
 
 /*Container for clock and subscribe box*/
@@ -353,6 +421,12 @@ h6 {
     font-size: 16px;
 }
 
+/*Defeat Monster button*/
+#defMon {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
 /*Rotating Tree*/
 #oneTree {
     -webkit-animation: spin 4s infinite linear;
@@ -362,8 +436,3 @@ h6 {
 	100% {-webkit-transform: rotate(360deg);}	
 }
 
-/*Sliding transition animation top-to-bottom*/
-.move-me-1 {
-    animation: move-in-steps 8s steps(4)
-    infinite;
-}

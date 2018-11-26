@@ -6,8 +6,12 @@ $(document).ready(function(){
 //Timer countdown function
 var timeleft = 10;
     var downloadTimer = setInterval(function(){
+        console.log('downloadTimer');
         timeleft--;
-        document.getElementById("countdowntimer").textContent = timeleft;
+        var element = document.getElementById("countdowntimer");
+        if (element) {
+             element.textContent = timeleft;
+        }
         if(timeleft <= 0)
             clearInterval(downloadTimer);
         if(timeleft == 0)
@@ -16,12 +20,21 @@ var timeleft = 10;
 
 //Buttion click to About page
 $(".about").click(function(){
-    window.location.href='about.html';
+    window.location.href='about.html?id="Dylan"';
 })
 
 //Button click to Play
 $(".play").click(function(){
-    window.location.href='misinformation_Intro.html';
+    $(".dpftext").toggleClass('exitDown');
+})
+$(".play").click(function() {
+    $(".play").toggleClass('exitDown');
+})
+$(".play").click(function(){
+    $("#monAnim").toggleClass('exitDown')
+})
+$(".play").click(function(){
+    $("#butAnim").toggleClass('exitDown')
 })
 
 //Button click to get monster intro modal 
@@ -49,9 +62,19 @@ $(".none").click(function(){
     window.location.href='success_Screen1.html';
 })
 
-//button within monster modal leading to Game Over
+//button within monster modal leading to Success Screen 2
 $("#Ok3").click(function(){
-    window.location.href='game_Over.html';
+    window.location.href='success_Screen2.html';
+})
+
+//button within monster modal leading to Success Screen 3
+$("#Ok4").click(function(){
+    window.location.href='success_Screen3.html';
+})
+
+//button within monster modal leading to Success Screen 3
+$("#defMon").click(function(){
+    $(".monster img").attr("src, images/explosion.png");
 })
     
 //button from Game End page back to start

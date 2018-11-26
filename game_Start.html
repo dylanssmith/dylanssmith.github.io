@@ -31,11 +31,33 @@
             <img class ="treasureChest" src="images/treasure%20chest.png"/>
         </a>
     </div>
-<!--DPF Text, Play button, and Player-->
+<!--DPF Text, Play button, Monster (eventually) and Player-->
     <div class="middle">
+        <img class="monster" id="monAnim" src="images/misinformation.png"/>
+<!-- Engage - Button trigger modal -->
+        <button type="button" class="btn btn-primary" id="butAnim" data-toggle="modal" data-target="#exampleModal">
+            Engage
+        </button>
         <h1 class="dpftext">Dark Patterns <span>Forest</span></h1>
         <img class="player" src="images/player.png"/>
         <button class="play">Play</button>
+<!-- Misinformation Intro Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Monster</h5>
+                  <img class="miniMonster" src="Images/misinformation.png"/>
+              </div>
+              <div class="modal-body">
+                  Welcome to the Dark Patterns Forest, Traveler. Who are we? You’ll learn soon enough. Try and solve me, if you can. But It’ll be dangerous for you if you can’t…
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Ok">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 <!--Right forest and About button-->
     <div class="rightBorder">
