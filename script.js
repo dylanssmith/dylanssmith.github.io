@@ -53,6 +53,11 @@ $(".none").click(function(){
 $("#Ok3").click(function(){
     window.location.href='game_Over.html';
 })
+    
+//button from Game End page back to start
+$("#endCont").click(function(){
+    window.location.href='game_Start.html';
+})
 
 });
 
