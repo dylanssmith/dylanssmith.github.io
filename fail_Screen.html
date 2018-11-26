@@ -1,0 +1,62 @@
+!DOCTYPE html>
+<!--Intro page for Misinformation Dark Patterns Monster-->
+<head>
+    <meta charset="UTF-8">
+    <title>Dark Patterns Forest: A Game!</title>
+<!--Bootstrap imports - JQuery, Popper.JS, and Bootstrap CSS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--link to jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--link to JavaScript-->
+    <script src="script.js" type="text/javascript"></script>
+<!--link to CSS-->
+    <link rel="stylesheet" type ="text/css" href="game.css">
+<!--Importing 8Bit Wonder Font-->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+<!--this is my favicon-->
+    <link rel="shortcut icon" href="images/misinformation.png">
+</head>
+<body class="grey">
+<!--left forest and treasure chest-->
+    <div class="leftBorder">
+        <a href="treasure_Chest.html">
+            <img class ="treasureChest" src="images/treasure%20chest.png"/>
+        </a>
+    </div>
+<!--Misinformation Monster and Player-->
+    <div class="middle">
+        <img class="monster" src="images/misinformation.png"/>
+        <img class="player" src="images/player.png"/>
+<!-- Engage - Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Engage
+        </button>
+<!-- Misinformation Intro Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Monster</h5>
+                  <img class="miniMonster" src="Images/misinformation.png"/>
+              </div>
+              <div class="modal-body">
+                  Ha ha! I apologize, traveler. But I see you could not solve my pattern. Maybe you’ll find out who I am next time. Now run away, or I’ll eat you!!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Ok3">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<!--Right forest and About button-->
+    <div class="rightBorder">
+        <button class="about">About</button>
+    </div>
+</body>
