@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Game play second screen - subscribe or not-->
+<!--Intro page for Misinformation Dark Patterns Monster-->
 <head>
     <meta charset="UTF-8">
     <title>Dark Patterns Forest: A Game!</title>
@@ -22,43 +22,36 @@
 <!--this is my favicon-->
     <link rel="shortcut icon" href="images/misinformation.png">
 </head>
-<body class="liteGrey">
-<!--Text box on top of page-->
-    <div class="goal">
-        <h2><span class="red">Goal: </span>Avoid subscribing to the newsletter!</h2>
+<body class="grey">
+<!--left forest and treasure chest-->
+    <div class="leftBorder">
+        <a href="treasure_Chest2.html">
+            <img class ="treasureChest" src="images/treasure%20chest%20with%20notification.png"/>
+        </a>
     </div>
-<!--Container for clock and subscribe box-->
-    <div class="subContainer">
-<!--Clock and countdown timer-->
-        <div class="clock">
-            <img src="images/clock.png"/>
-            <h3 id="countdowntimer">10</h3>
-        </div>
-<!--Subscribe text and buttons-->
-        <div class="subscribe">
-            <h2 class="sansRed">SUBSCRIBE NOW</h2>
-            <h5>Get caught up on  all the stuff <br> you’ve been missing out. </h5>
-            <h5 class="secondSans">Art, books, movies - <br>whatever your heart desires.</h5>
-<!-- Green button - trigger modal -->
-            <button type="button" class="green" data-toggle="modal" data-target="#exampleModal">
-                Subscribe to this newsletter
-            </button>
-            <button class="none">No, I don't like being interesting</button>
-        </div>
+<!--Misinformation Monster and Player-->
+    <div class="middle">
+        <img class="player" src="images/player.png"/>
+        <!-- Engage - Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Go On
+        </button>
 <!-- Misinformation Intro Modal -->
-<!-- Misinformation Intro Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" id="modalJump" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                  Uh oh! You were subscribed forever and ever!
+                  You learned a new pattern! Check your treasure chest.
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="Ok5">Ok</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
     </div>
-    
+<!--Right forest and About button-->
+    <div class="rightBorder">
+        <button class="about">About</button>
+    </div>
 </body>
