@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Game play second screen - subscribe or not-->
+<!--Intro page for Misinformation Dark Patterns Monster-->
 <head>
     <meta charset="UTF-8">
     <title>Dark Patterns Forest: A Game!</title>
@@ -14,51 +14,45 @@
 <!--link to jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--link to JavaScript-->
-    <script src="script.js" type="text/javascript"></script>
+    <script src="../Assets/script.js" type="text/javascript"></script>
 <!--link to CSS-->
-    <link rel="stylesheet" type ="text/css" href="game.css">
+    <link rel="stylesheet" type ="text/css" href="../Assets/game.css">
 <!--Importing 8Bit Wonder Font-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
 <!--this is my favicon-->
-    <link rel="shortcut icon" href="images/misinformation.png">
+    <link rel="shortcut icon" href="../Assets/Images/misinformation.png">
 </head>
-<body class="liteGrey">
-<!--Text box on top of page-->
-    <div class="goal">
-        <h2><span class="red">Goal: </span>Avoid subscribing to the newsletter!</h2>
+<body class="grey">
+<!--left forest and treasure chest-->
+    <div class="leftBorder">
+        <a href="../Treasure Chest/treasure_Chest.html">
+            <img class ="treasureChest" src="../Assets/Images/treasure%20chest.png"/>
+        </a>
     </div>
-<!--Container for clock and subscribe box-->
-    <div class="subContainer">
-<!--Clock and countdown timer-->
-        <div class="clock">
-            <img src="images/clock.png"/>
-            <h3 id="countdowntimer">10</h3>
-        </div>
-<!--Subscribe text and buttons-->
-        <div class="subscribe">
-            <h2 class="sansRed">SUBSCRIBE NOW</h2>
-            <h5>Get caught up on  all the stuff <br> you’ve been missing out. </h5>
-            <h5 class="secondSans">Art, books, movies - <br>whatever your heart desires.</h5>
-<!-- Green button - trigger modal -->
-            <button type="button" class="green" data-toggle="modal" data-target="#exampleModal">
-                Subscribe to this newsletter
-            </button>
-            <button class="none">No, I don't like being interesting</button>
-        </div>
-<!-- Misinformation Intro Modal -->
-<!-- Misinformation Intro Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Misinformation Monster and Player-->
+    <div class="middle">
+        <img class="monster" src="../Assets/Images/misinformation.png"/>
+        <img class="player" src="../Assets/Images/player.png"/>
+<!-- Mission Fail Modal -->
+        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Monster</h5>
+                  <img class="miniMonster" src="../Assets/Images/misinformation.png"/>
+              </div>
               <div class="modal-body">
-                  Uh oh! You were subscribed forever and ever!
+                  Ha ha! I apologize, traveler. <br>But I see you could not <br> solve my pattern. <br>Maybe you’ll find out <br>who I am next time. <br>Now run away, or I’ll eat you!!
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="Ok5">Ok</button>
+                <button type="button" class="btn btn-primary" id="Ok6">Ok</button>
               </div>
             </div>
           </div>
         </div>
     </div>
-    
+<!--Right forest and About button-->
+    <div class="rightBorder">
+        <button class="about">About</button>
+    </div>
 </body>

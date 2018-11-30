@@ -30,7 +30,6 @@ body {
 .red2 {
     color: #C03940;
     padding: 10px 0px 0px 0px;
-    
 }
 
 .darkBlueFull {
@@ -62,7 +61,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;  
-    padding: 10px;
+    padding: 40px;
 }
 .tc {
     margin: 0px 50px 0px 00px;
@@ -180,7 +179,18 @@ h6 {
     cursor: pointer;
 }
 
-
+/*Arrow Animations*/
+.Arrow img {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.Arrow:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 /*Treasure Chest empty boxes*/
 .box {
@@ -193,8 +203,7 @@ h6 {
 .whiteBox {
     background-color: #ffffff;
     margin-right: 10px;
-    padding: 40px;
-    max-width: 6px;
+    padding: 0px 0px 0px 21px;
     margin-bottom: 16px;
 }
 
@@ -291,7 +300,7 @@ h6 {
 
 /*Left background forest*/
 .leftBorder {
-    background-image: url("Images/left forest.png");
+    background-image: url("Images/left%20forest.png");
     width: 20%;
     height: 100%;
     background-size: cover;
@@ -347,7 +356,7 @@ h6 {
 }
 .tinyMonster{
     max-width: 60px;
-    display: flex;
+    padding: 13px 17px 0px 0px;
 }
 #monAnim {
     transition: transform 1s;

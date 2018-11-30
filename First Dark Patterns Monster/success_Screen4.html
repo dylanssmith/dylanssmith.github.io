@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Game play Success Screen-->
+<!--Intro page for Misinformation Dark Patterns Monster-->
 <head>
     <meta charset="UTF-8">
     <title>Dark Patterns Forest: A Game!</title>
@@ -14,26 +14,44 @@
 <!--link to jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--link to JavaScript-->
-    <script src="script.js" type="text/javascript"></script>
+    <script src="../Assets/script.js" type="text/javascript"></script>
 <!--link to CSS-->
-    <link rel="stylesheet" type ="text/css" href="game.css">
+    <link rel="stylesheet" type ="text/css" href="../Assets/game.css">
 <!--Importing 8Bit Wonder Font-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
 <!--this is my favicon-->
-    <link rel="shortcut icon" href="images/misinformation.png">
+    <link rel="shortcut icon" href="../Assets/Images/misinformation.png">
 </head>
-<body class="darkBlueFull">
+<body class="grey">
 <!--left forest and treasure chest-->
     <div class="leftBorder">
+        <a href="../Treasure%20Chest/treasure_Chest2.html">
+            <img class ="treasureChest" src="../Assets/Images/treasure%20chest%20with%20notification.png"/>
+        </a>
     </div>
-<!--Thank you Text, tree, and Continue button-->
+<!--Misinformation Monster and Player-->
     <div class="middle">
-        <h3 class="endtext">Thank you for playing!!</h3>
-        <h3 class="endtext2">More to come soon...</h3>
-        <img class="player" id="oneTree" src="images/oneTree.png"/>
-        <button class="small" id="endCont">Continue</button>
+        <img class="player" src="../Assets/Images/player.png"/>
+        <!-- Engage - Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Go On
+        </button>
+<!-- Misinformation Intro Modal -->
+        <div class="modal fade" id="exampleModal" id="modalJump" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                  You learned a new pattern! Check your treasure chest.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 <!--Right forest and About button-->
     <div class="rightBorder">
+        <button class="about">About</button>
     </div>
 </body>

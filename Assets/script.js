@@ -2,26 +2,28 @@
 var dataArray = [];
 
 $(document).ready(function(){
+    jQuery.noConflict();
+    $('#exampleModal2').modal().modal('show');
+    $('#exampleModal3').modal().modal('show');
+    $('#exampleModal5').modal().modal('show');
     
 //Timer countdown function
 var timeleft = 10;
     var downloadTimer = setInterval(function(){
-        console.log('downloadTimer');
         timeleft--;
         var element = document.getElementById("countdowntimer");
         if (element) {
              element.textContent = timeleft;
         }
-        if(timeleft <= 0)
+        if (timeleft == 0) {
             clearInterval(downloadTimer);
-        if(timeleft == 0)
-            null
-//            window.location.href='fail_Screen.html';
+            $('#exampleModal4').modal().modal('show');
+        }
     },1000);
 
 //Buttion click to About page
 $(".about").click(function(){
-    window.location.href='about.html';
+    window.location.href='../Miscellaneous/about.html';
 })
 
 //Button click to Play
@@ -80,12 +82,17 @@ $("#Ok5").click(function(){
     
 //button within monster modal leading to Game Over
 $("#Ok6").click(function(){
-    window.location.href='game_Over.html';
+    window.location.href='../Game End/game_Over.html';
+})
+
+//button from 'out of time' modal to Fail Screen
+$("#Ok7").click(function(){
+    window.location.href='fail_Screen.html';
 })
 
 //button that destroys monster + local storage action
 $("#defMon").click(function(){
-    $(".monster").attr("src", "images/explosion.png");
+    $(".monster").attr("src", "../Assets/Images/explosion.png");
     setTimeout(function() {
       window.location.href='success_Screen4.html'
     }, 1500);
@@ -95,12 +102,12 @@ $("#defMon").click(function(){
 
 //button from post-new treasure chest item to Game End page
 $("#goOn").click(function(){
-    window.location.href='game_End.html';
+    window.location.href='../Game End/game_End.html';
 })
     
 //button from Game End page back to start
 $("#endCont").click(function(){
-    window.location.href='game_Start.html';
+    window.location.href='../First Dark Patterns Monster/game_Start.html';
 })
 
 });

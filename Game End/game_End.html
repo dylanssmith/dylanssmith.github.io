@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--In-depth explanation page for Misinformation Monster-->
+<!--Game play Success Screen-->
 <head>
     <meta charset="UTF-8">
     <title>Dark Patterns Forest: A Game!</title>
@@ -14,37 +14,26 @@
 <!--link to jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--link to JavaScript-->
-    <script src="script.js" type="text/javascript"></script>
+    <script src="../Assets/script.js" type="text/javascript"></script>
 <!--link to CSS-->
-    <link rel="stylesheet" type ="text/css" href="game.css">
+    <link rel="stylesheet" type ="text/css" href="../Assets/game.css">
 <!--Importing 8Bit Wonder Font-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
 <!--this is my favicon-->
-    <link rel="shortcut icon" href="images/misinformation.png">
+    <link rel="shortcut icon" href="../Assets/Images/misinformation.png">
 </head>
-<body>
-<!--Text and link back to Treasure Chest page-->
-    <div class="tcFlex3">
-        <h2 class="red2">Back to Treasure Chest</h2>
-        <a href="treasure_Chest2.html">
-            <img src="images/right%20arrow.png"/>
-        </a>
+<body class="darkBlueFull">
+<!--left forest and treasure chest-->
+    <div class="leftBorder">
     </div>
-<!--Misinformation monster image and header-->
-    <div class="tcFlex2">
-        <img class="smallMonster" src="images/misinformation.png"/>
-        <h2 class="tcText2">Misinformation</h2>
-    </div>    
-<!--Misinformation Explanation-->
-    <div class="info">
-        <h4>This Dark Pattern Monster combines two dark patterns, <br>
-            Confirshaming and Misdirection (as seen on https://darkpatterns.org/)
-        </h4>
-        <h4>
-            Confirmshaming is the act of guilting the user into opting into something. <br>The option to decline is worded in such a way as to shame the user into compliance.
-        </h4>
-        <h4>
-            Misdirection is when the design purposefully focuses your attention on one thing <br> in order to distract you attention from another.
-        </h4>
-    </div>    
+<!--Thank you Text, tree, and Continue button-->
+    <div class="middle">
+        <h3 class="endtext">Thank you for playing!!</h3>
+        <h3 class="endtext2">More to come soon...</h3>
+        <img class="player" id="oneTree" src="../Assets/Images/oneTree.png"/>
+        <button class="small" id="endCont">Continue</button>
+    </div>
+<!--Right forest and About button-->
+    <div class="rightBorder">
+    </div>
 </body>
