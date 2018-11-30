@@ -1,11 +1,11 @@
 //Javascript file for Dark Patterns Game
-var dataArray = [];
-
 $(document).ready(function(){
+//    Immediate pop-up modals
     jQuery.noConflict();
     $('#exampleModal2').modal().modal('show');
     $('#exampleModal3').modal().modal('show');
     $('#exampleModal5').modal().modal('show');
+    $('#exampleModal6').modal().modal('show');
     
 //Timer countdown function
 var timeleft = 10;
@@ -15,6 +15,7 @@ var timeleft = 10;
         if (element) {
              element.textContent = timeleft;
         }
+//Pop up modal if times runs out
         if (timeleft == 0) {
             clearInterval(downloadTimer);
             $('#exampleModal4').modal().modal('show');
@@ -26,7 +27,7 @@ $(".about").click(function(){
     window.location.href='../Miscellaneous/about.html';
 })
 
-//Button click to Play
+//Button click to Play - w/ css animations, DPF text and play button slide out, and monster + Engage button slide in
 $(".play").click(function(){
     $(".dpftext").toggleClass('exitDown');
 })
@@ -90,14 +91,12 @@ $("#Ok7").click(function(){
     window.location.href='fail_Screen.html';
 })
 
-//button that destroys monster + local storage action
+//button that destroys monster
 $("#defMon").click(function(){
     $(".monster").attr("src", "../Assets/Images/explosion.png");
     setTimeout(function() {
       window.location.href='success_Screen4.html'
     }, 1500);
-    addToDataArray();
-    numItemsInCart();
 })
 
 //button from post-new treasure chest item to Game End page

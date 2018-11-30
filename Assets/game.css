@@ -1,4 +1,4 @@
-/*All styles for Dark Patterns Forest game*/
+/*All CSS styles for Dark Patterns Forest game*/
 
 /* Imported 8-bit font */
 body {
@@ -364,6 +364,7 @@ h6 {
     transition-delay: 1s;
     margin-top: -705px;
 }
+
 /*Button animation*/
 #butAnim {
     position: absolute;
@@ -408,7 +409,6 @@ h6 {
     transition: transition: all .2s ease-in-out; 
     border: 2px solid #41975F;
 }
-
 .green:hover {
     transform: scale(1.05);
     transition: .3s;
@@ -426,6 +426,7 @@ h6 {
     padding: 10px;
 }
 
+/*End Game Button*/
 #endCont {
     padding: 10px 30px;
     font-size: 16px;
